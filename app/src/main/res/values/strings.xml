@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">VAPassportSample</string>
+    <string name="app_title">防疫幫手</string>
+    <string name="app_title2">Coronavirus Prevention</string>
+    <string name="va_passport">疫苗護照</string>
+    <string name="va_register">防疫實聯制</string>
+    <string name="et_date_hint">點擊選擇日期</string>
+    <string name="et_time_hint">點擊選擇時間</string>
+    <string name="input_email">輸入電子郵件</string>
+    <string name="input_email_hint">請輸入正確的email</string>
+    <string name="text_to_long">長度過長</string>
+
+
+</resources>
