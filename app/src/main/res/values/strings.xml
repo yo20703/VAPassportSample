@@ -9,6 +9,9 @@
     <string name="input_email">輸入電子郵件</string>
     <string name="input_email_hint">請輸入正確的email</string>
     <string name="text_to_long">長度過長</string>
+    <string name="name">姓名</string>
+    <string name="birthday">生日</string>
+    <string name="number">身分證字號</string>
 
 
 </resources>
