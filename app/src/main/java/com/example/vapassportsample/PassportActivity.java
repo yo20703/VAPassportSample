@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.vapassportsample.database.table.User;
+import com.example.vapassportsample.database.table.VaccineHistory;
 
 import java.util.ArrayList;
 
@@ -130,12 +131,12 @@ public class PassportActivity extends AppCompatActivity {
         reloadUserInfo();
     }
 
-    private ArrayList<DataBean> getDataBeans() {
-        ArrayList<DataBean> dataBeans = new ArrayList<>();
+    private ArrayList<VaccineHistory> getDataBeans() {
+        ArrayList<VaccineHistory> dataBeans = new ArrayList<>();
 
-        dataBeans.add(new DataBean(true, "已施打", "第一劑疫苗"));
-        dataBeans.add(new DataBean(false, "未施打", "第二劑疫苗"));
-        dataBeans.add(new DataBean(false, "未施打", "第三劑疫苗"));
+        dataBeans.add(new VaccineHistory(true, "已施打", "第一劑疫苗"));
+        dataBeans.add(new VaccineHistory(false, "未施打", "第二劑疫苗"));
+        dataBeans.add(new VaccineHistory(false, "未施打", "第三劑疫苗"));
         return dataBeans;
     }
 }

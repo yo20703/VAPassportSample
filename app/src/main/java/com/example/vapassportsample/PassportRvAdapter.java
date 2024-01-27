@@ -9,13 +9,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.vapassportsample.database.table.VaccineHistory;
+
 import java.util.ArrayList;
 
 public class PassportRvAdapter extends RecyclerView.Adapter {
 
-    ArrayList<DataBean> dataBeans = new ArrayList<>();
-    public PassportRvAdapter(ArrayList<DataBean> dataBeans){
-        this.dataBeans = dataBeans;
+    ArrayList<VaccineHistory> vaccineHistories = new ArrayList<>();
+
+    public PassportRvAdapter(ArrayList<VaccineHistory> vaccineHistories) {
+        this.vaccineHistories = vaccineHistories;
     }
 
     static class PassportViewHolder extends RecyclerView.ViewHolder {
@@ -41,26 +44,14 @@ public class PassportRvAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        int imageResource = dataBeans.get(position).isCheck ? R.drawable.checked : R.drawable.cancel;
+        int imageResource = vaccineHistories.get(position).isCheck ? R.drawable.checked : R.drawable.cancel;
         ((PassportViewHolder) holder).imageView.setImageResource(imageResource);
-        ((PassportViewHolder) holder).tv1.setText(dataBeans.get(position).status1);
-        ((PassportViewHolder) holder).tv2.setText(dataBeans.get(position).status2);
+        ((PassportViewHolder) holder).tv1.setText(vaccineHistories.get(position).status1);
+        ((PassportViewHolder) holder).tv2.setText(vaccineHistories.get(position).status2);
     }
 
     @Override
     public int getItemCount() {
-        return dataBeans.size();
-    }
-}
-
-class DataBean{
-    Boolean isCheck;
-    String status1;
-    String status2;
-
-    public DataBean(Boolean isCheck, String status1, String status2) {
-        this.isCheck = isCheck;
-        this.status1 = status1;
-        this.status2 = status2;
+        return vaccineHistories.size();
     }
 }
